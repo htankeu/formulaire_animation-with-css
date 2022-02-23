@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Unical+Antiqua&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Uncial Antiqua',cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background: url(./media/basic-pics/wallpapers-hd-forest-hd-desktop-wallpapers-amazing-windows-1920x1080.jpg);
+    filter: blur(5px) opacity(25%);
+}
+
+.container{
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #333;
+}
+
+.from-control{
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+}
+
+.from-control input{
+    border: 0;
+    border-bottom: 2px solid #333;
+    font-size: 18px;
+    font-family: inherit;
+    padding: 15px 0;
+    outline: none;
+    transition: all .3s ease-in;
+    background: transparent;
+}
+
+.from-control input:focus, .from-control input:valid{
+    border-bottom-color:rgb(99, 228, 228);
+}
+
+.from-control label{
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: -1;
+}
+
+.from-control input:focus + label, .from-control input:valid ~ label{
+    color: rgb(99, 228, 228);
+    transform: translateY(-30px);
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+button{
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: 1px solid rgb(99, 228, 228);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    transition: .4s ease;
+    background: transparent;
+    font-family: inherit;
+}
+
+button:hover{
+    box-shadow: inset 0 0 0 30px rgb(99, 228, 228), 1px 1px 3px #333;
+    transform: translateX(4px);
+    color: #eee;
+}
+
+button:active{
+    transform: scale(0.95);
+}
